@@ -15,10 +15,15 @@ Repositorio listo para usar con un sistema de tests de comprensión lectora en e
 
 ## Uso
 
-1. Subí este contenido a un repositorio de GitHub.
-2. Compartí el repo o el contenido del `prompt.txt`.
-3. Cuando un usuario quiera rendir, indicá el test deseado, por ejemplo: `PER4` o `EDU7`.
-4. El sistema debe usar `prompt.txt` y el texto correspondiente.
+Si querés rendir un test de comprensión lectora:
+
+1. Elegí un test, por ejemplo `PER4` o `EDU7`.
+2. Indicá al sistema cuál querés rendir.
+3. Leé el texto completo cuando se te muestre.
+4. Respondé `listo` cuando termines de leer.
+5. Contestá las preguntas una por una.
+6. Revisá la corrección inmediata después de cada respuesta.
+7. Al final, consultá tu puntaje, fortalezas, errores y recomendación de nivel siguiente.
 
 ## Nota
 
