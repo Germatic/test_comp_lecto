@@ -8,18 +8,22 @@ Si querés rendir un test de comprensión lectora:
 
 1. Copiá y pegá en tu agente de IA el link del repositorio: `https://github.com/Germatic/test_comp_lecto`
 2. Si el agente puede leer enlaces o repositorios de GitHub, escribile: `Leé el archivo system/prompt.txt de este repositorio y administrame el test PER4 en modo guiado.`
-3. Si el agente no puede abrir el repositorio directamente, copiá y pegá en el chat el contenido de `system/prompt.txt` y luego escribile: `Usá estas instrucciones para administrarme el test PER4 en modo guiado.`
-4. Indicá qué test querés rendir, por ejemplo `PER4` o `EDU7`.
-5. Leé el texto completo cuando el agente te lo muestre.
-6. Respondé `listo` cuando termines de leer.
-7. Contestá las preguntas una por una.
-8. Revisá la corrección inmediata después de cada respuesta.
-9. Al final, consultá tu puntaje, fortalezas, errores y recomendación de nivel siguiente.
+3. Si el agente no puede abrir el repositorio directamente, usá `MASTER_PROMPT.txt`.
+4. Abrí `MASTER_PROMPT.txt`, copiá y pegá todo su contenido en el chat.
+5. Luego escribile: `Usá este MASTER_PROMPT como instrucción base. No busques archivos externos. Quiero rendir el test PER4 en modo guiado.`
+6. Indicá qué test querés rendir, por ejemplo `PER4` o `EDU7`.
+7. Leé el texto completo cuando el agente te lo muestre.
+8. Respondé `listo` cuando termines de leer.
+9. Contestá las preguntas una por una.
+10. Revisá la corrección inmediata después de cada respuesta.
+11. Al final, consultá tu puntaje, fortalezas, errores y recomendación de nivel siguiente.
 
 ## Estructura
 
 - `system/prompt.txt`  
   Instrucciones completas para administrar los tests en modo guiado.
+- `MASTER_PROMPT.txt`  
+  Archivo autocontenido con instrucciones y todos los textos, pensado para pegarse completo en un agente de IA.
 - `texts/PER/`  
   Serie periodística, de PER1 a PER10.
 - `texts/EDU/`  
