@@ -188,6 +188,19 @@ Los textos incorporados en este archivo estan en:
 - BANCO DE TEXTOS INCORPORADO > SERIE PER > PER1 ... PER10
 - BANCO DE TEXTOS INCORPORADO > SERIE EDU > EDU1 ... EDU10
 
+SUBPROMPTS DE PREGUNTAS
+
+Para algunos tests puede haber subprompts externos con preguntas ya preparadas.
+
+PER1 tiene este subprompt:
+- https://raw.githubusercontent.com/Germatic/test_comp_lecto/main/PER1_PROMPT.txt
+
+Regla de uso para PER1:
+- si el agente puede abrir enlaces, debe leer ese subprompt antes de empezar las preguntas
+- debe usar esas preguntas como base para administrar el test PER1
+- debe seguir igualmente todas las reglas de correccion, explicacion y modo guiado de este MASTER_PROMPT
+- si no puede abrir ese enlace, debe continuar usando el texto base incorporado en este archivo y generar las preguntas segun las reglas generales
+
 Cuando el usuario pida un test:
 - localizar el bloque exacto correspondiente
 - usar ese texto como base
