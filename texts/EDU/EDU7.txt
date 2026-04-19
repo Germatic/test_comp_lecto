@@ -1,11 +1,17 @@
 Título: Qué son los sesgos cognitivos y por qué importan
 
-Los seres humanos no procesan la información de manera completamente neutral. Al interpretar lo que ocurre, suelen intervenir atajos mentales que permiten decidir más rápido, pero que también pueden introducir errores sistemáticos. A esos errores recurrentes se los conoce como sesgos cognitivos.
+En la vida cotidiana solemos creer que vemos los hechos tal como son. Sin embargo, numerosos estudios muestran que el procesamiento humano de la información está lejos de ser completamente neutral. Al percibir, recordar, evaluar y decidir, recurrimos con frecuencia a atajos mentales que simplifican la tarea, pero que también pueden introducir distorsiones sistemáticas. A esas distorsiones se las conoce como sesgos cognitivos.
 
-Los sesgos no son simplemente equivocaciones aisladas. Son tendencias relativamente predecibles en la forma en que percibimos, recordamos o evaluamos la información. Por ejemplo, una persona puede prestar más atención a los datos que confirman su opinión previa e ignorar aquellos que la contradicen. Este fenómeno es conocido como sesgo de confirmación.
+Conviene aclarar que un sesgo no es simplemente un error ocasional. Todos podemos equivocarnos por distracción o desconocimiento. Los sesgos cognitivos, en cambio, son tendencias relativamente estables y previsibles en la forma en que interpretamos la información. No aparecen al azar: responden a modos habituales de funcionamiento de la mente.
 
-La existencia de sesgos no significa que el razonamiento humano sea inútil o irracional en todos los casos. Significa, más bien, que nuestra manera de pensar tiene límites y regularidades que conviene conocer. Comprender esos límites permite analizar con más cuidado nuestras decisiones.
+Estos atajos existen porque pensar con detalle cada situación sería, en muchos casos, demasiado lento o costoso. Gracias a esa simplificación podemos actuar con rapidez. El problema aparece cuando mecanismos útiles en ciertos contextos nos llevan a conclusiones apresuradas en situaciones más complejas.
 
-En educación, estudiar los sesgos cognitivos puede ser especialmente útil. Ayuda a que los estudiantes comprendan por qué una idea les resulta intuitiva, por qué ciertas conclusiones parecen evidentes sin serlo y por qué revisar el propio razonamiento es una parte central del aprendizaje.
+Uno de los ejemplos más conocidos es el sesgo de confirmación. Consiste en prestar más atención a la información que coincide con una creencia previa e ignorar o minimizar la que la contradice. Otro caso frecuente es el de la disponibilidad: tendemos a considerar más probable o más importante aquello que recordamos con facilidad, aunque esa impresión no refleje su verdadera frecuencia.
 
-Pensar mejor no consiste en eliminar por completo los sesgos, algo probablemente imposible, sino en reconocer cuándo pueden estar influyendo sobre nuestros juicios.
+Reconocer la existencia de sesgos no implica concluir que el razonamiento humano es inútil. Al contrario, conocer esos límites permite diseñar prácticas para compensarlos: contrastar fuentes, buscar evidencia contraria, demorar conclusiones y someter nuestras ideas a revisión.
+
+En educación, esta cuestión es especialmente valiosa. Un estudiante puede interpretar un texto según lo que esperaba encontrar en él y no según lo que realmente dice. Puede recordar mejor los datos que coinciden con sus opiniones y olvidar los otros. Por eso, pensar mejor no consiste en aspirar a una neutralidad perfecta, sino en desarrollar hábitos de vigilancia intelectual que permitan juzgar con mayor prudencia y responsabilidad.
+
+Esto tiene consecuencias directas para la lectura y la discusión. Una persona puede considerar más convincente un argumento no porque esté mejor fundamentado, sino porque coincide con sus creencias previas. También puede sentirse demasiado segura de una conclusión simplemente porque le resulta familiar o intuitiva. Reconocer ese problema no elimina el sesgo, pero obliga a trabajar con más cuidado.
+
+Por eso, estudiar los sesgos cognitivos no busca volver desconfiado a todo lector ni convertir cada decisión en una duda interminable. Busca algo más preciso: hacer visible que la seguridad subjetiva no garantiza la verdad y que comprender mejor exige, muchas veces, contrastar impresiones iniciales con razones, evidencias y objeciones.

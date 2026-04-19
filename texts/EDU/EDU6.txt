@@ -1,11 +1,13 @@
 Título: Los conocimientos previos y su influencia en la comprensión
 
-La comprensión de un texto o de una explicación no depende únicamente de la calidad de lo que se enseña. También está fuertemente condicionada por los conocimientos previos de quien aprende. Esto significa que dos personas pueden recibir exactamente la misma información y, sin embargo, comprenderla de manera muy distinta.
+Cuando dos personas escuchan la misma explicación o leen el mismo texto, no necesariamente comprenden lo mismo. Aunque la información sea idéntica, cada una la recibe desde una historia intelectual distinta. Ya posee ideas, asociaciones, ejemplos y creencias que influyen en la manera en que interpreta lo nuevo. A ese conjunto de saberes anteriores se lo suele llamar conocimientos previos.
 
-Los conocimientos previos funcionan como una red de apoyo. Permiten ubicar nuevas ideas, establecer relaciones y completar información que el material no desarrolla por completo. Cuando esa red es débil o insuficiente, el aprendizaje se vuelve más difícil, incluso si el contenido parece claro.
+Lejos de ser un detalle secundario, los conocimientos previos cumplen una función decisiva en la comprensión. Actúan como una estructura de apoyo que permite ubicar la nueva información, relacionarla con otras nociones y darle un sentido más estable. Cuando esa base existe, el aprendizaje suele avanzar con mayor fluidez. Cuando falta, incluso una explicación clara puede resultar fragmentaria.
 
-Por esta razón, enseñar no consiste solo en transmitir datos nuevos. En muchos casos, requiere activar saberes anteriores, detectar ideas erróneas o construir puentes entre lo conocido y lo desconocido.
+Esto ocurre porque comprender no es acumular datos aislados. La mente organiza lo que aprende mediante conexiones. Si alguien ya entiende qué es una hipótesis, por ejemplo, le resultará más sencillo captar una explicación sobre experimentación científica. Si nunca trabajó con esa idea, tendrá que construir varios elementos a la vez: no solo el contenido nuevo, sino también el marco conceptual en el que ese contenido cobra sentido.
 
-A veces, además, los conocimientos previos no ayudan, sino que obstaculizan. Esto ocurre cuando una persona interpreta un concepto nuevo a partir de una idea previa inadecuada. En esos casos, aprender implica revisar y, si es necesario, corregir lo que ya se creía saber.
+Por esa razón, enseñar no debería consistir únicamente en agregar información. También implica explorar qué sabe ya el estudiante, qué conceptos domina y qué confusiones arrastra. A veces la dificultad no está en la complejidad del material, sino en la distancia entre ese material y el punto desde el que el alumno intenta interpretarlo.
 
-La enseñanza eficaz, por lo tanto, no parte de una mente vacía, sino de una mente que ya contiene esquemas, expectativas e interpretaciones.
+Ahora bien, los conocimientos previos no siempre facilitan el aprendizaje. En ocasiones lo obstaculizan. Esto sucede cuando una persona interpreta una idea nueva desde un esquema anterior inadecuado. En ese caso, lo previo no funciona como apoyo, sino como filtro distorsionador.
+
+Por eso, aprender no solo requiere incorporar contenidos, sino también revisar ciertas representaciones previas. Algunas deben ampliarse; otras, corregirse; otras, directamente abandonarse. La enseñanza eficaz no parte de una mente vacía, sino de una mente que ya organiza el mundo de alguna manera.

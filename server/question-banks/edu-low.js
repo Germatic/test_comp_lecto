@@ -1,0 +1,955 @@
+module.exports = {
+  EDU1: [
+    {
+      id: "edu1-q1",
+      prompt: "¿Cuál es la idea principal del texto?",
+      options: [
+        "Aprender consiste sobre todo en repetir información con precisión.",
+        "La educación debería centrarse solo en ejercitar la memoria.",
+        "Aprender de verdad implica pasar de la repetición a la comprensión.",
+        "Comprender y memorizar son exactamente lo mismo.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El texto distingue entre recordar y comprender, y concluye que aprender de verdad supone ir más allá de la repetición. La memoria importa, pero no agota el aprendizaje.",
+      tip: "Buscá la frase que sintetiza el texto completo y no un detalle aislado.",
+      topics: ["mainIdea", "conclusion"],
+    },
+    {
+      id: "edu1-q2",
+      prompt: "Según el texto, ¿qué puede hacer una persona que realmente comprende un tema?",
+      options: [
+        "Repetir las palabras exactas con las que estudió.",
+        "Explicarlo con sus propias palabras y usarlo en situaciones nuevas.",
+        "Recordar datos aislados sin relacionarlos.",
+        "Evitar vincularlo con otros conocimientos.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "El segundo párrafo afirma que comprender permite explicar, relacionar y aplicar lo aprendido en contextos nuevos. Eso diferencia la comprensión de la mera memorización.",
+      tip: "Cuando el texto enumera capacidades, la respuesta correcta suele reunir varias de ellas sin deformarlas.",
+      topics: ["details"],
+    },
+    {
+      id: "edu1-q3",
+      prompt: "¿Por qué el texto dice que la memoria sigue siendo importante?",
+      options: [
+        "Porque ayuda a retener información básica.",
+        "Porque esa base permite pensar con más profundidad.",
+        "Porque vuelve innecesaria la comprensión.",
+        "Porque garantiza usar lo aprendido con flexibilidad.",
+        "A y B",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El texto no rechaza la memoria: explica que recordar información básica es necesario y que esa base permite pensar con mayor profundidad. No dice que la memoria reemplace la comprensión ni que garantice un uso flexible por sí sola.",
+      tip: "Si una opción especial combina dos ideas, comprobá que ambas estén realmente apoyadas por el texto.",
+      topics: ["causeEffect", "details"],
+    },
+    {
+      id: "edu1-q4",
+      prompt: "En la frase “la educación no debería detenerse allí”, ¿a qué se refiere “allí”?",
+      options: [
+        "A usar lo aprendido de manera flexible.",
+        "A establecer relaciones entre conocimientos.",
+        "A recordar información básica como único objetivo.",
+        "A explicar un tema con palabras propias.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "“Allí” retoma la idea anterior: recordar información básica. El texto acepta esa base, pero sostiene que la educación no debe quedarse solo en ese nivel.",
+      tip: "Para resolver referencias como “allí” o “eso”, mirá la idea inmediatamente anterior.",
+      topics: ["vocabulary", "inference"],
+      isTricky: true,
+    },
+    {
+      id: "edu1-q5",
+      prompt: "¿Qué buscan muchas actividades escolares, según el texto?",
+      options: [
+        "Comprobar únicamente si el alumno recuerda datos.",
+        "Obtener respuestas correctas y rápidas sin importar el proceso.",
+        "Que el alumno razone, interprete y establezca relaciones.",
+        "Evitar que el estudiante use sus propias palabras.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El texto dice explícitamente que muchas actividades escolares buscan algo más que respuestas correctas. Su función es impulsar operaciones de comprensión más profundas.",
+      tip: "Si te preguntan por la función de una práctica, buscá verbos como “buscar”, “permitir” o “servir para”.",
+      topics: ["tools"],
+    },
+    {
+      id: "edu1-q6",
+      prompt: "¿Qué rasgo describe mejor a quien solo memoriza, según el texto?",
+      options: [
+        "Depende mucho de las palabras exactas con las que estudió.",
+        "Puede aplicar lo aprendido en situaciones nuevas.",
+        "Relaciona el tema con otros conocimientos.",
+        "Explica el contenido con flexibilidad.",
+      ],
+      correctOptionIndex: 0,
+      explanation:
+        "El texto contrasta ambas situaciones: quien comprende puede explicar y aplicar; quien solo memoriza depende de la formulación exacta con la que estudió.",
+      tip: "Prestá atención a los contrastes entre dos perfiles: suelen definir con claridad cada uno.",
+      topics: ["details", "structure"],
+    },
+    {
+      id: "edu1-q7",
+      prompt: "¿Qué conclusión general se desprende del texto?",
+      options: [
+        "La memoria debería eliminarse de la educación.",
+        "Comprender solo importa cuando no interviene la memoria.",
+        "El aprendizaje auténtico integra memoria básica y comprensión.",
+        "Repetir con exactitud lo estudiado basta para aprender de verdad.",
+        "Ninguna de las anteriores",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El texto articula ambas ideas: la memoria es necesaria, pero el objetivo educativo es una comprensión que permita usar lo aprendido de manera flexible. Esa combinación resume su conclusión.",
+      tip: "Una buena conclusión integra las partes del texto en lugar de exagerar una sola.",
+      topics: ["conclusion"],
+    },
+  ],
+  EDU2: [
+    {
+      id: "edu2-q1",
+      prompt: "¿Cuál es la idea principal del texto?",
+      options: [
+        "Aprender depende solo del esfuerzo individual.",
+        "La atención ocupa un lugar central para que la información pueda convertirse en conocimiento.",
+        "Las distracciones externas son inevitables y no pueden manejarse.",
+        "Estudiar mucho tiempo siempre garantiza comprensión.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "Desde el inicio, el texto afirma que no basta con estar presente: una idea primero tiene que ser atendida. Esa importancia de la atención organiza todo el texto.",
+      tip: "La idea principal suele unir el comienzo y el cierre del texto.",
+      topics: ["mainIdea"],
+    },
+    {
+      id: "edu2-q2",
+      prompt: "Según el texto, ¿qué permite la atención?",
+      options: [
+        "Memorizar cualquier contenido de inmediato.",
+        "Eliminar por completo la dificultad de un tema.",
+        "Seleccionar información y sostenerla el tiempo suficiente para empezar a trabajar con ella.",
+        "Evitar toda necesidad de esfuerzo para aprender.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El primer párrafo define la función de la atención: seleccionar cierta información y mantenerla el tiempo suficiente como para comenzar a procesarla.",
+      tip: "En preguntas definicionales, buscá la formulación más cercana a la del texto.",
+      topics: ["details"],
+    },
+    {
+      id: "edu2-q3",
+      prompt: "¿Por qué alguien puede “estar” en clase o leer varias páginas y luego no saber qué entendió?",
+      options: [
+        "Porque la memoria desaparece por completo mientras estudia.",
+        "Porque a veces la información apenas roza la mente y no llega a procesarse de verdad.",
+        "Porque todo contenido escolar es necesariamente demasiado difícil.",
+        "Porque comprender depende solo del tiempo que dura la clase.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "El segundo párrafo dice que el problema no siempre está en la memoria ni en la dificultad del tema. A veces la información no llega a ser procesada realmente.",
+      tip: "Prestá atención a las explicaciones causales introducidas por expresiones como “esto explica por qué”.",
+      topics: ["causeEffect"],
+    },
+    {
+      id: "edu2-q4",
+      prompt: "¿Qué significa “prestar atención” en este texto?",
+      options: [
+        "Mirar fijo y quedarse quieto aunque la mente divague.",
+        "Repetir varias veces la misma información.",
+        "Orientar la actividad mental hacia un objeto y evitar interrupciones constantes.",
+        "Leer rápido para no perder el hilo.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El texto aclara que prestar atención no es solo mirar o permanecer quieto. Consiste en orientar la actividad mental y evitar interrupciones constantes.",
+      tip: "Cuando el texto corrige una idea común con “no significa solo...”, la respuesta correcta suele estar en la reformulación posterior.",
+      topics: ["vocabulary", "details"],
+    },
+    {
+      id: "edu2-q5",
+      prompt: "¿Qué situaciones menciona el texto como perjudiciales para la comprensión?",
+      options: [
+        "Estudiar en medio del ruido.",
+        "Revisar mensajes a cada momento.",
+        "Organizar el tiempo de estudio.",
+        "Cambiar de tarea de forma continua.",
+        "A, B y D",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El tercer párrafo enumera como obstáculos el ruido, la revisión constante de mensajes y el cambio continuo de tarea. Organizar el tiempo aparece más adelante como ayuda, no como problema.",
+      tip: "En las opciones especiales, verificá una por una qué partes del listado sí aparecen en el texto.",
+      topics: ["details"],
+    },
+    {
+      id: "edu2-q6",
+      prompt: "¿Qué conjunto de acciones propone el texto para sostener mejor el foco?",
+      options: [
+        "Reducir estímulos innecesarios.",
+        "Dividir tareas largas en tramos más manejables.",
+        "Organizar el tiempo.",
+        "Multiplicar distracciones para acostumbrarse.",
+        "A, B y C",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El cuarto párrafo presenta exactamente esas tres estrategias como modos de cuidar y fortalecer la atención. La cuarta opción contradice el sentido del texto.",
+      tip: "Si el texto enumera estrategias concretas, buscá la opción que las reúna sin agregar una contraria.",
+      topics: ["tools", "details"],
+    },
+    {
+      id: "edu2-q7",
+      prompt: "¿Qué puede inferirse del texto sobre “estar presente” en una situación de aprendizaje?",
+      options: [
+        "Alcanza por sí solo para que haya comprensión.",
+        "No garantiza comprensión si la mente no llega a atender de verdad la información.",
+        "Solo importa cuando el contenido es sencillo.",
+        "Es más importante que cualquier condición del entorno.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "El texto distingue entre estar presente y atender. Una persona puede estar físicamente frente al contenido y aun así no comprender si la información no llega a procesarse realmente.",
+      tip: "No confundas una condición visible con la condición mental que el texto considera decisiva.",
+      topics: ["inference"],
+      isTricky: true,
+    },
+    {
+      id: "edu2-q8",
+      prompt: "¿Qué significa en este contexto que la atención “no es una capacidad fija”?",
+      options: [
+        "Que puede cuidarse y fortalecerse.",
+        "Que desaparece por completo cuando aparece el cansancio.",
+        "Que solo algunas personas pueden desarrollarla.",
+        "Que depende exclusivamente del talento natural.",
+      ],
+      correctOptionIndex: 0,
+      explanation:
+        "El propio texto explica esa idea enseguida: la atención no es fija porque puede cuidarse y fortalecerse mediante ciertas prácticas.",
+      tip: "Una expresión abstracta suele aclararse en la oración siguiente con verbos más concretos.",
+      topics: ["vocabulary"],
+    },
+    {
+      id: "edu2-q9",
+      prompt: "¿Qué contraste establece la última oración del texto?",
+      options: [
+        "Sin atención hay memoria; con atención desaparece el esfuerzo.",
+        "Sin atención hay comprensión; con atención hay distracciones.",
+        "Sin atención la información pasa de largo; con atención puede empezar a convertirse en conocimiento.",
+        "Sin atención el tema es fácil; con atención se vuelve difícil.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El cierre contrapone dos situaciones: sin atención la información pasa, mientras que con atención puede comenzar el proceso de convertirse en conocimiento.",
+      tip: "En un contraste final, fijate qué cambia entre las dos mitades de la frase.",
+      topics: ["structure", "conclusion"],
+    },
+    {
+      id: "edu2-q10",
+      prompt: "¿Con cuál de estas afirmaciones estaría de acuerdo el texto?",
+      options: [
+        "Aprender exige esfuerzo.",
+        "El esfuerzo necesita condiciones adecuadas.",
+        "La atención ocupa un lugar central entre esas condiciones.",
+        "Estar quieto basta para comprender.",
+        "A, B y C",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "La conclusión del texto reúne esas tres ideas: aprender exige esfuerzo, pero también condiciones adecuadas, y entre ellas la atención ocupa un lugar central. La cuarta opción contradice el desarrollo anterior.",
+      tip: "Las mejores síntesis suelen combinar varias afirmaciones compatibles del texto.",
+      topics: ["conclusion"],
+    },
+  ],
+  EDU3: [
+    {
+      id: "edu3-q1",
+      prompt: "¿Cuál es la idea principal del texto?",
+      options: [
+        "Leer bien consiste principalmente en reconocer palabras con rapidez.",
+        "La lectura es una construcción activa de sentido y no solo decodificación.",
+        "Los textos sencillos siempre resultan fáciles de comprender.",
+        "La velocidad lectora es el objetivo principal de enseñar a leer.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "El texto rechaza la idea de que leer sea solo descifrar palabras y sostiene que leer implica construir sentido. Esa oposición organiza todo el desarrollo.",
+      tip: "Cuando el texto corrige una creencia común, la idea principal suele estar en la reformulación que viene después.",
+      topics: ["mainIdea"],
+    },
+    {
+      id: "edu3-q2",
+      prompt: "Según el texto, ¿qué hace el lector al leer?",
+      options: [
+        "Recibe el significado de manera automática y completa.",
+        "Relaciona frases, distingue ideas principales y completa información no totalmente explícita.",
+        "Se limita a identificar vocabulario conocido.",
+        "Evita hacer inferencias para no alterar el texto.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "El segundo párrafo describe la lectura como una actividad activa: el lector relaciona, distingue y completa información a partir de pistas del texto.",
+      tip: "Si el texto enumera operaciones del lector, la respuesta correcta suele conservar esa secuencia.",
+      topics: ["details"],
+    },
+    {
+      id: "edu3-q3",
+      prompt: "¿Por qué un texto puede parecer fácil en la superficie y, sin embargo, resultar difícil de comprender?",
+      options: [
+        "Porque puede exigir hacer inferencias.",
+        "Porque puede requerir advertir relaciones implícitas.",
+        "Porque puede usar palabras conocidas y aun así ser complejo.",
+        "Porque la dificultad depende solamente del vocabulario.",
+        "A, B y C",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El texto aclara que la dificultad no depende solo del vocabulario. Un texto puede parecer simple y seguir siendo exigente si obliga a inferir o a notar relaciones no explícitas.",
+      tip: "No reduzcas una explicación a un solo factor si el texto presenta varios.",
+      topics: ["causeEffect", "details"],
+    },
+    {
+      id: "edu3-q4",
+      prompt: "¿Qué implica “completar información que a veces no aparece de forma directa”?",
+      options: [
+        "Inventar libremente cualquier significado posible.",
+        "Inferir de manera razonable a partir de pistas del texto.",
+        "Ignorar lo escrito y apoyarse solo en opiniones previas.",
+        "Memorizar palabras sin relacionarlas.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "El texto no autoriza a inventar cualquier cosa, sino a inferir a partir de relaciones y referencias presentes. Se trata de una actividad guiada por el propio texto.",
+      tip: "Inferir no es agregar cualquier idea: siempre debe haber apoyo textual.",
+      topics: ["inference"],
+      isTricky: true,
+    },
+    {
+      id: "edu3-q5",
+      prompt: "¿Qué papel cumplen los conocimientos previos en la comprensión?",
+      options: [
+        "No influyen si el lector lee con atención.",
+        "Dificultan siempre la interpretación.",
+        "Influyen en la interpretación porque cada lector llega con saberes y experiencias distintas.",
+        "Reemplazan por completo lo que dice el texto.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El cuarto párrafo afirma que los conocimientos previos y las experiencias influyen en cómo cada lector interpreta lo que lee.",
+      tip: "Si el texto compara a distintos lectores, buscá qué variable explica esa diferencia.",
+      topics: ["details", "causeEffect"],
+    },
+    {
+      id: "edu3-q6",
+      prompt: "¿Qué ejemplos menciona el texto como posibles fuentes de comprensión desigual entre lectores?",
+      options: [
+        "Una referencia histórica.",
+        "Una metáfora.",
+        "Una explicación técnica.",
+        "La numeración de las páginas.",
+        "A, B y C",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El cuarto párrafo da esos tres ejemplos para mostrar que no todos comprenden del mismo modo un mismo texto. La numeración de páginas no aparece como ejemplo relevante.",
+      tip: "Los ejemplos concretos del texto suelen transformarse casi directamente en opciones correctas.",
+      topics: ["details"],
+    },
+    {
+      id: "edu3-q7",
+      prompt: "¿Qué idea rechaza el texto cuando afirma que el lector no recibe el significado “como si el texto lo depositara completo en su mente”?",
+      options: [
+        "Que leer implica alguna actividad del lector.",
+        "Que el lector debe relacionar frases e ideas.",
+        "Que la lectura exige reconstruir sentido.",
+        "Que leer sea una recepción puramente pasiva del significado.",
+      ],
+      correctOptionIndex: 3,
+      explanation:
+        "Esa comparación sirve para negar una idea pasiva de la lectura. El sentido no llega terminado: el lector debe construirlo activamente.",
+      tip: "Prestá atención a las comparaciones que el texto usa para negar una idea equivocada.",
+      topics: ["inference", "structure"],
+    },
+    {
+      id: "edu3-q8",
+      prompt: "Según el texto, ¿a qué no debería reducirse la enseñanza de la lectura?",
+      options: [
+        "A aumentar la velocidad.",
+        "A trabajar con textos diversos.",
+        "A interpretar referencias históricas.",
+        "A usar conocimientos previos.",
+      ],
+      correctOptionIndex: 0,
+      explanation:
+        "El último párrafo dice explícitamente que enseñar a leer no debería reducirse a aumentar la velocidad. También implica trabajar ideas principales, argumentos y supuestos.",
+      tip: "Cuando el texto dice “no debería reducirse a...”, esa expresión suele aparecer literalmente en la respuesta correcta.",
+      topics: ["details"],
+    },
+    {
+      id: "edu3-q9",
+      prompt: "Según el cierre del texto, enseñar a leer también implica:",
+      options: [
+        "Pronunciar sin errores.",
+        "Identificar ideas principales.",
+        "Distinguir ejemplos de argumentos.",
+        "Detectar lo que el texto da por supuesto.",
+        "B, C y D",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El último párrafo enumera esas tres tareas como parte de una enseñanza de la lectura orientada a la comprensión. Pronunciar sin errores no alcanza por sí solo.",
+      tip: "En una opción combinada, revisá si cada componente aparece de manera expresa en el cierre.",
+      topics: ["conclusion", "structure"],
+    },
+    {
+      id: "edu3-q10",
+      prompt: "¿Qué puede inferirse del texto sobre “descifrar palabras”?",
+      options: [
+        "Es inútil para leer de verdad.",
+        "Es suficiente para comprender un texto complejo.",
+        "Es importante, pero constituye solo el comienzo de la lectura.",
+        "Importa menos que cualquier conocimiento previo.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El texto reconoce que esa habilidad es importante, pero insiste en que no alcanza para hablar de verdadera lectura. Por eso la presenta como un inicio y no como una meta suficiente.",
+      tip: "No confundas algo necesario con algo suficiente si el texto establece esa diferencia.",
+      topics: ["inference", "conclusion"],
+    },
+    {
+      id: "edu3-q11",
+      prompt: "¿Cuál de estas afirmaciones sería incompatible con el texto?",
+      options: [
+        "Cada lector llega al texto con conocimientos y experiencias distintas.",
+        "Un texto puede usar palabras conocidas y seguir siendo difícil.",
+        "Leer bien consiste principalmente en pronunciar sin errores.",
+        "La lectura implica una actividad activa del lector.",
+        "Ninguna de las anteriores",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El texto cuestiona justamente la idea de que leer bien consista sobre todo en reconocer o pronunciar palabras sin errores. Las otras opciones sí coinciden con su planteo.",
+      tip: "En preguntas con formulación negativa, primero descartá las opciones que el texto sí apoya.",
+      topics: ["inference"],
+      isTricky: true,
+    },
+    {
+      id: "edu3-q12",
+      prompt: "¿Qué conclusión resume mejor el texto?",
+      options: [
+        "Leer de verdad es reconocer palabras cada vez más rápido.",
+        "Leer de verdad es comprender y construir sentido a partir del texto.",
+        "La dificultad lectora depende solo del vocabulario desconocido.",
+        "Todos los lectores interpretan igual cuando leen con atención.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "La conclusión retoma toda la argumentación: descifrar palabras es apenas el inicio; leer de verdad es comprender, relacionar e interpretar.",
+      tip: "La mejor conclusión integra definición, proceso y alcance del tema tratado.",
+      topics: ["conclusion", "mainIdea"],
+    },
+  ],
+  EDU4: [
+    {
+      id: "edu4-q1",
+      prompt: "¿Cuál es la idea principal del texto?",
+      options: [
+        "Pensar críticamente equivale a desconfiar de todo.",
+        "El pensamiento crítico consiste en examinar afirmaciones con cuidado, no en rechazarlas por sistema.",
+        "La mejor forma de pensar es oponerse siempre a cualquier autoridad.",
+        "Pensar críticamente significa discutir por discutir.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "El texto corrige una idea muy extendida y propone otra más precisa: pensar críticamente es examinar razones, pruebas y supuestos antes de aceptar una afirmación.",
+      tip: "Si el texto empieza rechazando una interpretación común, la tesis suele estar en la definición alternativa.",
+      topics: ["mainIdea"],
+    },
+    {
+      id: "edu4-q2",
+      prompt: "Según el texto, ¿qué acciones sí forman parte del pensamiento crítico?",
+      options: [
+        "Desconfiar de todo.",
+        "Examinar una afirmación antes de aceptarla.",
+        "Preguntarse en qué se apoya.",
+        "Revisar los supuestos que contiene.",
+        "B, C y D",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El segundo párrafo presenta esas acciones como parte del pensamiento crítico. La primera opción retoma la interpretación insuficiente que el texto cuestiona.",
+      tip: "En las opciones especiales, comprobá si cada elemento de la combinación aparece en la definición del texto.",
+      topics: ["details"],
+    },
+    {
+      id: "edu4-q3",
+      prompt: "¿Qué interpretación considera insuficiente el texto en su primer párrafo?",
+      options: [
+        "Que pensar críticamente sea una invitación a desconfiar de todo o rechazar cualquier afirmación.",
+        "Que pensar críticamente implique revisar razones y pruebas.",
+        "Que la crítica pueda volver más sólido el conocimiento.",
+        "Que una conclusión pueda estar mejor fundada que otra.",
+      ],
+      correctOptionIndex: 0,
+      explanation:
+        "El primer párrafo dice que esa interpretación es común, pero insuficiente. El resto de las opciones expresa aspectos que el texto sí defiende.",
+      tip: "Fijate si el autor presenta una idea para sostenerla o para cuestionarla.",
+      topics: ["details"],
+    },
+    {
+      id: "edu4-q4",
+      prompt: "¿Qué función cumple la crítica, según el texto?",
+      options: [
+        "Destruir cualquier forma de conocimiento.",
+        "Reemplazar la necesidad de pruebas.",
+        "Volver el conocimiento más sólido.",
+        "Impedir que existan varias posibilidades razonables.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El texto aclara que la crítica no destruye el conocimiento: intenta volverlo más sólido mediante el examen de razones y supuestos.",
+      tip: "Cuando el texto niega una función, suele afirmar enseguida la función correcta.",
+      topics: ["tools"],
+    },
+    {
+      id: "edu4-q5",
+      prompt: "¿Qué preguntas debería hacerse una persona que piensa críticamente, según el texto?",
+      options: [
+        "De dónde viene la información.",
+        "Qué pruebas la respaldan.",
+        "Si existen excepciones importantes.",
+        "Si el argumento mantiene coherencia interna.",
+        "Todas las anteriores",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El tercer párrafo enumera justamente esas preguntas como parte del trabajo de examinar una afirmación con cuidado.",
+      tip: "Si el texto ofrece una serie de preguntas, revisá si la opción especial reúne toda la lista.",
+      topics: ["details", "tools"],
+    },
+    {
+      id: "edu4-q6",
+      prompt: "¿Por qué el texto dice que este trabajo requiere atención y paciencia?",
+      options: [
+        "Porque toda afirmación bien presentada es necesariamente verdadera.",
+        "Porque analizar argumentos elimina toda duda de inmediato.",
+        "Porque lo importante es responder rápido antes de olvidar la idea.",
+        "Porque muchas ideas parecen plausibles al principio y solo revelan debilidades con un examen más cuidadoso.",
+      ],
+      correctOptionIndex: 3,
+      explanation:
+        "El texto afirma que muchas ideas parecen plausibles a primera vista, pero sus debilidades aparecen solo cuando se las analiza con más cuidado. De ahí la necesidad de atención y paciencia.",
+      tip: "En preguntas causales, buscá qué rasgo del problema justifica la necesidad mencionada.",
+      topics: ["causeEffect"],
+    },
+    {
+      id: "edu4-q7",
+      prompt: "¿Por qué el pensamiento crítico debe aplicarse también a las propias creencias?",
+      options: [
+        "Porque revisar ideas ajenas alcanza para pensar críticamente.",
+        "Porque no basta con exigir evidencia a otros si uno nunca revisa sus propios prejuicios o conclusiones apresuradas.",
+        "Porque las creencias propias son siempre menos razonables que las ajenas.",
+        "Porque la autocrítica solo importa en debates académicos.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "El cuarto párrafo insiste en que el pensamiento crítico no puede dirigirse solo hacia afuera. También exige revisar las propias creencias y sesgos.",
+      tip: "Prestá atención a las frases del tipo “no basta con... si...”: suelen marcar una condición decisiva.",
+      topics: ["causeEffect", "details"],
+    },
+    {
+      id: "edu4-q8",
+      prompt: "¿Qué implica la autocrítica en este texto?",
+      options: [
+        "Revisar los propios prejuicios.",
+        "Revisar las propias conclusiones apresuradas.",
+        "Pedir evidencia ajena sin examinar nunca las propias ideas.",
+        "Aceptar que las propias creencias también deben someterse a examen.",
+        "A, B y D",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El texto presenta la autocrítica como parte de la disciplina intelectual: revisar prejuicios, revisar conclusiones apresuradas y someter también las creencias propias a examen.",
+      tip: "Cuando una idea es más sutil, compará qué opciones mantienen el matiz y cuáles lo contradicen.",
+      topics: ["inference", "details"],
+      isTricky: true,
+    },
+    {
+      id: "edu4-q9",
+      prompt: "En educación, fomentar el pensamiento crítico significa:",
+      options: [
+        "Enseñar a discutir por discutir.",
+        "Ayudar a justificar posiciones.",
+        "Evaluar argumentos.",
+        "Reconocer cuándo una conclusión está mejor fundada que otra.",
+        "B, C y D",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El último párrafo formula esas tres tareas como objetivo educativo. Discutir por discutir es justamente lo que el texto rechaza.",
+      tip: "Las consecuencias educativas suelen aparecer con claridad en el cierre del texto.",
+      topics: ["conclusion", "tools"],
+    },
+    {
+      id: "edu4-q10",
+      prompt: "¿Qué idea rechaza el texto de principio a fin?",
+      options: [
+        "Que examinar razones ayude a evaluar una afirmación.",
+        "Que una conclusión pueda estar mejor fundada que otra.",
+        "Que pensar críticamente consista en rechazo automático o negación por hábito.",
+        "Que las pruebas importen en la evaluación de lo que se afirma.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El texto vuelve varias veces sobre esa corrección: pensar críticamente no equivale a negar por hábito ni a sospechar por principio.",
+      tip: "Cuando una idea reaparece varias veces para ser corregida, suele ser la posición que el texto combate.",
+      topics: ["inference", "mainIdea"],
+    },
+    {
+      id: "edu4-q11",
+      prompt: "¿Qué significa que muchas ideas “parecen plausibles a primera vista”?",
+      options: [
+        "Que pueden parecer razonables al comienzo, aunque un análisis más cuidadoso descubra problemas.",
+        "Que toda idea plausible es verdadera.",
+        "Que las primeras impresiones deben imponerse sobre las pruebas.",
+        "Que analizar demasiado complica innecesariamente las decisiones.",
+      ],
+      correctOptionIndex: 0,
+      explanation:
+        "La expresión se aclara en la continuación del párrafo: una idea puede parecer convincente al inicio y mostrar debilidades solo después de un examen más riguroso.",
+      tip: "Para vocabulario en contexto, fijate cómo el propio texto desarrolla la expresión.",
+      topics: ["vocabulary"],
+    },
+    {
+      id: "edu4-q12",
+      prompt: "¿Qué rasgos asocia el texto con el ejercicio del pensamiento crítico?",
+      options: [
+        "Atención.",
+        "Paciencia.",
+        "Autocrítica.",
+        "Rechazo automático.",
+        "A, B y C",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El texto menciona atención y paciencia al hablar del análisis cuidadoso, y agrega la autocrítica al tratar las propias creencias. El rechazo automático es precisamente lo contrario de lo que defiende.",
+      tip: "Reuní rasgos que aparezcan en distintas partes del texto si todos apuntan al mismo perfil.",
+      topics: ["details"],
+    },
+    {
+      id: "edu4-q13",
+      prompt: "¿Qué afirma el texto con la expresión “no basta con pedir evidencia ajena”?",
+      options: [
+        "Que revisar ideas ajenas ya es suficiente para pensar críticamente.",
+        "Que el examen crítico pierde valor si nunca se aplica a las propias creencias.",
+        "Que no conviene pedir pruebas cuando una idea parece razonable.",
+        "Que la autocrítica reemplaza toda evaluación de argumentos ajenos.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "El texto sostiene que exigir evidencia a otros no alcanza si uno no revisa también sus propios prejuicios y conclusiones apresuradas.",
+      tip: "Cuando una frase empieza con “no basta con...”, buscá qué condición adicional vuelve imprescindible el texto.",
+      topics: ["inference"],
+      isTricky: true,
+    },
+    {
+      id: "edu4-q14",
+      prompt: "¿Qué función cumple el último párrafo dentro del texto?",
+      options: [
+        "Introduce por primera vez el problema central.",
+        "Traduce la tesis general a una consecuencia educativa concreta.",
+        "Abandona la definición de pensamiento crítico y pasa a otro tema.",
+        "Se limita a repetir literalmente el primer párrafo sin aportar nada nuevo.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "El cierre aplica la idea general del pensamiento crítico al ámbito educativo: justificar posiciones, evaluar argumentos y reconocer mejores fundamentos.",
+      tip: "Mirá si el último párrafo toma la tesis general y la convierte en una aplicación específica.",
+      topics: ["structure", "conclusion"],
+    },
+    {
+      id: "edu4-q15",
+      prompt: "¿Cuál de estas fórmulas resume mejor el cierre del texto?",
+      options: [
+        "Pensar críticamente es rechazo automático.",
+        "Pensar críticamente es examen cuidadoso.",
+        "Pensar críticamente implica justificar posiciones de manera razonada.",
+        "Pensar críticamente es discutir por discutir.",
+        "Pensar críticamente combina examen cuidadoso con justificación razonada.",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El cierre une esas dos ideas: el pensamiento crítico es examen cuidadoso y, en educación, supone aprender a justificar posiciones con razones.",
+      tip: "Si la síntesis final combina definición y aplicación, una opción especial puede reunir ambas mejor que una sola frase aislada.",
+      topics: ["conclusion"],
+    },
+  ],
+  EDU5: [
+    {
+      id: "edu5-q1",
+      prompt: "¿Cuál es la idea principal del texto?",
+      options: [
+        "Responder correctamente siempre es más importante que preguntar.",
+        "Formular buenas preguntas es una parte central del aprendizaje.",
+        "Las preguntas amplias son siempre las mejores.",
+        "La enseñanza debería evitar las preguntas para avanzar más rápido.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "El texto sostiene que formular buenas preguntas es una habilidad muy valiosa en educación y explica cómo orienta la búsqueda y favorece la autonomía intelectual.",
+      tip: "La idea principal debe abarcar tanto el valor de la pregunta como sus efectos en el aprendizaje.",
+      topics: ["mainIdea"],
+    },
+    {
+      id: "edu5-q2",
+      prompt: "Según el primer párrafo, ¿qué puede hacer una pregunta bien planteada?",
+      options: [
+        "Orientar la atención.",
+        "Organizar la búsqueda de información.",
+        "Ayudar a delimitar el problema que se quiere comprender.",
+        "Funcionar solo como señal de duda.",
+        "A, B y C",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El primer párrafo enumera exactamente esas tres funciones de una buena pregunta. El texto aclara, además, que no es solo una señal de duda.",
+      tip: "Si una opción especial reúne varias funciones expresas del texto, revisá si todas aparecen formuladas allí.",
+      topics: ["tools", "details"],
+    },
+    {
+      id: "edu5-q3",
+      prompt: "¿Por qué el texto dice que no todas las preguntas cumplen la misma función?",
+      options: [
+        "Porque algunas solo sirven para mostrar ignorancia.",
+        "Porque unas se usan en educación y otras fuera de ella.",
+        "Porque algunas buscan datos y otras exploran causas, comparaciones o consecuencias.",
+        "Porque solo las preguntas cerradas permiten aprender.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El segundo párrafo distingue funciones distintas: buscar datos, explorar causas, comparaciones o consecuencias, revisar supuestos y detectar vacíos.",
+      tip: "Cuando el texto clasifica algo, la respuesta correcta suele conservar esa diversidad.",
+      topics: ["details", "structure"],
+    },
+    {
+      id: "edu5-q4",
+      prompt: "¿Qué tipo de preguntas menciona el texto como útiles para detectar vacíos en el propio razonamiento?",
+      options: [
+        "Preguntas destinadas únicamente a recordar definiciones.",
+        "Preguntas que ayudan a revisar supuestos o a advertir lo que todavía no se pensó bien.",
+        "Preguntas pensadas solo para cerrar una discusión cuanto antes.",
+        "Preguntas que reemplazan la necesidad de investigar.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "El texto menciona preguntas que permiten revisar supuestos y otras que ayudan a detectar vacíos en el razonamiento propio. Ambas cumplen una función reflexiva.",
+      tip: "Fijate si la pregunta apunta a recordar un dato o a revisar cómo se está pensando.",
+      topics: ["details", "inference"],
+    },
+    {
+      id: "edu5-q5",
+      prompt: "¿Por qué las preguntas demasiado generales pueden resultar difíciles de trabajar?",
+      options: [
+        "Porque vuelven innecesaria la búsqueda de información.",
+        "Porque siempre carecen de interés pedagógico.",
+        "Porque dificultan avanzar con claridad sobre un aspecto delimitado.",
+        "Porque solo sirven para obtener datos aislados.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El tercer párrafo señala que las preguntas demasiado generales pueden parecer atractivas, pero resultan difíciles de trabajar justamente porque no enfocan con claridad el problema.",
+      tip: "Prestá atención a los contrastes entre una formulación amplia y una más precisa.",
+      topics: ["causeEffect"],
+    },
+    {
+      id: "edu5-q6",
+      prompt: "Según el texto, una pregunta más precisa permite:",
+      options: [
+        "Enfocar mejor la atención.",
+        "Avanzar con mayor claridad.",
+        "Trabajar sobre un aspecto delimitado.",
+        "Reemplazar toda búsqueda de información.",
+        "A, B y C",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El tercer párrafo vincula la precisión de la pregunta con esas tres ventajas: mejor foco, mayor claridad y trabajo sobre un aspecto delimitado.",
+      tip: "Si el texto enumera ventajas consecutivas, una opción especial puede sintetizarlas correctamente.",
+      topics: ["details", "tools"],
+    },
+    {
+      id: "edu5-q7",
+      prompt: "En este texto, “delimitar el problema” significa principalmente:",
+      options: [
+        "Volverlo más amplio para incluir cualquier tema posible.",
+        "Definir con más precisión qué aspecto se quiere comprender.",
+        "Evitar formular nuevas preguntas.",
+        "Transformar una duda en una respuesta inmediata.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "La idea aparece ligada a precisar qué aspecto se quiere entender. Delimitar no es agrandar el problema, sino acotarlo mejor.",
+      tip: "Para vocabulario en contexto, buscá cómo el texto concreta la expresión en una acción intelectual.",
+      topics: ["vocabulary"],
+    },
+    {
+      id: "edu5-q8",
+      prompt: "¿Cómo ayudan las buenas preguntas a ordenar el pensamiento propio?",
+      options: [
+        "Permiten identificar con más precisión qué parte del asunto resulta confusa.",
+        "Garantizan por sí solas una respuesta correcta.",
+        "Vuelven innecesario comparar ideas.",
+        "Evitan que la persona tenga que pedir ayuda.",
+      ],
+      correctOptionIndex: 0,
+      explanation:
+        "El cuarto párrafo explica que, muchas veces, solo al formular una pregunta alguien logra reconocer qué parte del asunto no entiende bien.",
+      tip: "Si el texto describe un problema confuso, buscá la acción que ayuda a volverlo más preciso.",
+      topics: ["tools", "details"],
+    },
+    {
+      id: "edu5-q9",
+      prompt: "¿Qué puede ocurrir cuando alguien siente que “no entiende” algo, según el texto?",
+      options: [
+        "Que en realidad ya entiende todo, pero duda innecesariamente.",
+        "Que solo necesita memorizar más información.",
+        "Que recién al formular una pregunta identifica qué parte del asunto le resulta confusa.",
+        "Que debe abandonar la búsqueda porque el problema es demasiado amplio.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El cuarto párrafo muestra justamente esa situación: la pregunta ayuda a localizar la dificultad en lugar de quedarse en una sensación vaga de no entender.",
+      tip: "Buscá la secuencia que propone el texto: sensación confusa, formulación de una pregunta, identificación más precisa del problema.",
+      topics: ["causeEffect"],
+    },
+    {
+      id: "edu5-q10",
+      prompt: "Una vez identificada la parte confusa, ¿qué acciones dice el texto que pueden hacerse mejor?",
+      options: [
+        "Buscar ejemplos.",
+        "Comparar ideas.",
+        "Pedir ayuda de manera más eficaz.",
+        "Prescindir de información nueva.",
+        "A, B y C",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El texto dice que, a partir de una pregunta bien formulada, la persona puede buscar ejemplos, comparar ideas o pedir ayuda con mayor eficacia.",
+      tip: "Revisá si la opción especial reúne solo acciones que el texto presenta como consecuencia de formular mejor la pregunta.",
+      topics: ["details", "tools"],
+    },
+    {
+      id: "edu5-q11",
+      prompt: "¿Qué sugiere la frase “cada forma de pregunta abre un camino distinto”?",
+      options: [
+        "Que todas las preguntas terminan conduciendo al mismo tipo de respuesta.",
+        "Que el tipo de pregunta influye en la dirección de la búsqueda y del razonamiento.",
+        "Que conviene usar una sola clase de preguntas para no confundirse.",
+        "Que las preguntas amplias siempre son superiores a las precisas.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "Esa frase resume la idea de que no todas las preguntas cumplen la misma función: según cómo se pregunte, se orienta de un modo distinto la búsqueda de comprensión.",
+      tip: "Cuando el texto usa una metáfora como “abrir un camino”, preguntate qué efecto intelectual está describiendo.",
+      topics: ["inference", "structure"],
+    },
+    {
+      id: "edu5-q12",
+      prompt: "¿Qué significa que quien sabe preguntar mejor “no depende por completo de respuestas ya preparadas”?",
+      options: [
+        "Que deja de necesitar cualquier información de otras personas.",
+        "Que ya no necesita verificar nada antes de concluir.",
+        "Que debe rechazar toda explicación ajena.",
+        "Que puede orientar con mayor precisión su propia búsqueda de conocimiento.",
+      ],
+      correctOptionIndex: 3,
+      explanation:
+        "El texto no propone aislamiento intelectual. Sostiene que saber preguntar da más autonomía para orientar la propia búsqueda, aunque siga siendo posible recurrir a información o ayuda de otros.",
+      tip: "No confundas autonomía con independencia absoluta: el texto marca un matiz importante.",
+      topics: ["inference", "conclusion"],
+      isTricky: true,
+    },
+    {
+      id: "edu5-q13",
+      prompt: "¿Con cuáles de estas afirmaciones estaría de acuerdo el texto?",
+      options: [
+        "La pregunta más amplia no siempre es la mejor.",
+        "Distintas preguntas pueden cumplir funciones distintas.",
+        "Enseñar a preguntar ayuda a desarrollar autonomía intelectual.",
+        "Las preguntas precisas no influyen en la búsqueda de información.",
+        "Todas las anteriores",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "Las tres primeras afirmaciones están sostenidas por distintas partes del texto: la crítica a las preguntas demasiado amplias, la diversidad de funciones y la relación entre preguntar y autonomía.",
+      tip: "Antes de elegir “Todas las anteriores”, verificá una por una que cada afirmación esté realmente apoyada por el texto.",
+      topics: ["conclusion", "details"],
+    },
+    {
+      id: "edu5-q14",
+      prompt: "¿Qué función cumple “Sin embargo” en el primer párrafo?",
+      options: [
+        "Introduce un ejemplo de pregunta demasiado general.",
+        "Cierra el texto con una conclusión sobre autonomía intelectual.",
+        "Marca un contraste entre valorar las respuestas correctas y reconocer la importancia de formular buenas preguntas.",
+        "Niega que responder correctamente tenga algún valor en educación.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "“Sin embargo” introduce el giro central del primer párrafo: aunque se valoren mucho las respuestas correctas, también hay otra habilidad importante, la de formular buenas preguntas.",
+      tip: "Los conectores como “sin embargo” suelen señalar el cambio de foco más importante del párrafo.",
+      topics: ["structure"],
+    },
+    {
+      id: "edu5-q15",
+      prompt: "¿Cuál de estas afirmaciones exagera lo que el texto sostiene?",
+      options: [
+        "Una pregunta más precisa puede ayudar a enfocar mejor la atención.",
+        "No siempre la pregunta más amplia es la mejor.",
+        "Las preguntas amplias nunca sirven para investigar nada.",
+        "Aprender a preguntar puede ayudar a ordenar el pensamiento propio.",
+      ],
+      correctOptionIndex: 2,
+      explanation:
+        "El texto dice que no siempre la pregunta más amplia es la mejor, pero no afirma que las preguntas amplias sean inútiles en todos los casos. Esa formulación extrema exagera el planteo.",
+      tip: "Desconfiá de palabras absolutas como “nunca” si el texto usa formulaciones más moderadas.",
+      topics: ["inference"],
+      isTricky: true,
+    },
+    {
+      id: "edu5-q16",
+      prompt: "¿Qué consecuencias vincula el texto con enseñar a preguntar?",
+      options: [
+        "Reduce la dependencia completa de respuestas ya preparadas.",
+        "Permite orientar con mayor precisión la propia búsqueda.",
+        "Contribuye a desarrollar autonomía intelectual.",
+        "Hace innecesario cualquier intercambio con otros.",
+        "A, B y C",
+      ],
+      correctOptionIndex: 4,
+      explanation:
+        "El último párrafo une esas tres consecuencias: menos dependencia de respuestas ya preparadas, mejor orientación de la búsqueda propia y desarrollo de autonomía intelectual. No propone aislarse de los demás.",
+      tip: "Las consecuencias finales suelen resumir el valor educativo central del texto.",
+      topics: ["conclusion"],
+    },
+    {
+      id: "edu5-q17",
+      prompt: "¿Qué relación establece el texto entre preguntar y responder en educación?",
+      options: [
+        "Preguntar es una habilidad menor frente a responder.",
+        "Responder correctamente importa, pero formular buenas preguntas también es una habilidad decisiva.",
+        "Solo las respuestas correctas organizan la búsqueda de información.",
+        "Preguntar y responder cumplen exactamente la misma función.",
+      ],
+      correctOptionIndex: 1,
+      explanation:
+        "El texto no desprecia la capacidad de responder correctamente, pero sostiene que formular buenas preguntas también es una habilidad clave para aprender mejor.",
+      tip: "Cuando el texto compara dos habilidades, buscá si opone una a la otra o si las valora de manera distinta pero compatible.",
+      topics: ["mainIdea", "conclusion"],
+    },
+  ],
+};

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Práctica de Tests de Comprensión Lectora</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">Práctica en navegador</p>
+          <h1>Sistema de Práctica de Tests de Comprensión Lectora</h1>
+        </div>
+        <button id="backToSelection" class="ghost-button hidden" type="button">
+          Cambiar test
+        </button>
+      </header>
+
+      <main id="app" class="app-layout"></main>
+      <div id="statusMessage" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+    </div>
+
+    <template id="loadingTemplate">
+      <section class="panel centered-panel">
+        <p class="muted">Cargando la aplicación…</p>
+      </section>
+    </template>
+
+    <template id="errorTemplate">
+      <section class="panel centered-panel">
+        <h2>No se pudo cargar la aplicación</h2>
+        <p id="errorMessage" class="muted"></p>
+        <button id="retryButton" class="primary-button" type="button">
+          Reintentar
+        </button>
+      </section>
+    </template>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

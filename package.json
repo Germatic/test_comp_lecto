@@ -1,0 +1,26 @@
+{
+  "name": "test_comp_lecto",
+  "version": "1.0.0",
+  "description": "Repositorio listo para usar con un sistema de tests de comprensión lectora en español.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js",
+    "test": "echo \"No test suite configured yet\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Germatic/test_comp_lecto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Germatic/test_comp_lecto/issues"
+  },
+  "homepage": "https://github.com/Germatic/test_comp_lecto#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

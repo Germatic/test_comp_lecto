@@ -1,11 +1,17 @@
 Título: Explicar, comprender e interpretar: tres operaciones distintas
 
-En el ámbito del conocimiento, suele hablarse de explicar, comprender e interpretar como si fueran acciones equivalentes. Sin embargo, aunque pueden relacionarse entre sí, no significan exactamente lo mismo.
+En muchas conversaciones sobre conocimiento, lectura y enseñanza, las palabras “explicar”, “comprender” e “interpretar” se usan como si fueran equivalentes. Sin embargo, aunque pueden relacionarse entre sí, no significan lo mismo. Distinguirlas permite pensar con mayor precisión qué tipo de tarea intelectual se está realizando y qué clase de respuesta tiene sentido en cada situación.
 
-Explicar implica mostrar por qué ocurre algo o cómo funciona. Una explicación busca establecer relaciones de causa, estructura o mecanismo. En cambio, comprender supone captar el sentido de una idea o de una situación dentro de un marco más amplio. Interpretar, por su parte, consiste en proponer una lectura posible de un hecho, un texto o una acción.
+Explicar suele consistir en responder preguntas del tipo “por qué” o “cómo”. Cuando alguien explica, intenta mostrar relaciones de causa, mecanismo, estructura o funcionamiento. Comprender, en cambio, no se reduce a exponer causas. Comprender implica captar el sentido de una idea, una acción, una situación o un texto dentro de un marco más amplio.
 
-Estas diferencias importan porque no todos los objetos de conocimiento exigen el mismo tipo de aproximación. Un fenómeno físico suele requerir explicación; una norma social puede necesitar comprensión; una obra literaria admite interpretación. Esto no significa que cada campo quede encerrado en una única operación, sino que ciertas preguntas dominan más en unos casos que en otros.
+Interpretar introduce todavía otra dimensión. No consiste simplemente en repetir lo que está dado, sino en proponer una lectura posible de un hecho, una obra, una conducta o un discurso. En muchos casos, esa interpretación no aspira a una única respuesta definitiva, pero tampoco autoriza cualquier ocurrencia: debe sostenerse con razones y con elementos presentes en el objeto analizado.
 
-Confundir estas operaciones puede producir malentendidos. A veces se pide una explicación donde solo es posible ofrecer una interpretación razonada. Otras veces se cree haber comprendido algo solo porque se lo puede repetir de memoria.
+Estas distinciones se vuelven más claras cuando se observa que no todos los objetos de conocimiento piden lo mismo. Un fenómeno físico suele requerir explicación. Una práctica social puede requerir comprensión. Una obra literaria suele abrir el espacio de la interpretación. Esto no significa que cada campo quede encerrado en una sola operación, sino que ciertas preguntas predominan más en unos casos que en otros.
 
-En educación, distinguir entre estas formas de trabajo intelectual ayuda a precisar mejor qué se espera del estudiante y qué tipo de respuesta tiene sentido en cada caso.
+La enseñanza se beneficia mucho de esta distinción. Si un docente pide “explicar” pero espera en realidad una interpretación, es probable que el estudiante no sepa qué tipo de respuesta se le solicita. Del mismo modo, alguien puede creer que comprendió un tema solo porque logra repetir una secuencia o una definición.
+
+También conviene advertir que estas operaciones no se evalúan con los mismos criterios. Una explicación puede juzgarse por su coherencia causal y su ajuste a la evidencia. Una comprensión puede valorarse por la capacidad de situar un problema dentro de un marco más amplio. Una interpretación, en cambio, no se mide solo por su originalidad, sino también por la solidez de las razones que la sostienen y por su fidelidad al objeto analizado.
+
+En lectura, esta diferencia tiene efectos concretos. Un lector puede explicar la estructura de un pasaje sin comprender el argumento general del texto. Puede comprender el tema central de un ensayo sin haber interpretado todavía un fragmento ambiguo. Puede incluso ofrecer una interpretación sugerente, pero débil, si no logra vincularla con elementos efectivamente presentes en la obra o el discurso.
+
+Por eso, distinguir entre explicar, comprender e interpretar ayuda a formular mejor las consignas, a orientar de modo más claro el trabajo del estudiante y a evitar malentendidos innecesarios. Nombrar bien estas operaciones es una forma de pensar mejor sobre lo que hacemos cuando intentamos entender algo.
