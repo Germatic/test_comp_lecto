@@ -12,6 +12,9 @@ const state = {
   feedback: null,
   answers: [],
   errorMessage: "",
+  attemptId: null,
+  attemptClosed: false,
+  lastTrackedViewKey: "",
 };
 
 function escapeHtml(value) {
@@ -35,8 +38,17 @@ function formatPercentage(value) {
   return `${Math.round(value * 100)}%`;
 }
 
-async function fetchJson(url, fallbackMessage) {
-  const response = await fetch(url);
+async function fetchJson(url, fallbackMessage, options = {}) {
+  const requestOptions = { ...options };
+  if (requestOptions.body !== undefined) {
+    requestOptions.headers = {
+      "Content-Type": "application/json",
+      ...(requestOptions.headers || {}),
+    };
+    requestOptions.body = JSON.stringify(requestOptions.body);
+  }
+
+  const response = await fetch(url, requestOptions);
   const contentType = response.headers.get("content-type") || "";
   const rawBody = await response.text();
 
@@ -65,6 +77,169 @@ async function fetchJson(url, fallbackMessage) {
     return JSON.parse(rawBody);
   } catch (_error) {
     throw new Error(fallbackMessage);
+  }
+}
+
+function resetAttemptTracking() {
+  state.attemptId = null;
+  state.attemptClosed = false;
+  state.lastTrackedViewKey = "";
+}
+
+function getAttemptEventUrl() {
+  if (!state.attemptId) return null;
+  return `/api/attempts/${encodeURIComponent(state.attemptId)}`;
+}
+
+async function postAttemptEvent(eventType, payload = {}) {
+  const attemptUrl = getAttemptEventUrl();
+  if (!state.config?.analyticsEnabled || !attemptUrl) {
+    return;
+  }
+
+  try {
+    await fetchJson(
+      `${attemptUrl}/events`,
+      "No se pudo registrar el evento analítico.",
+      {
+        method: "POST",
+        body: {
+          eventType,
+          ...payload,
+        },
+      },
+    );
+  } catch (_error) {
+    // El circuito de práctica no debe romperse si falla el registro analítico.
+  }
+}
+
+async function completeAttempt(summary) {
+  const attemptUrl = getAttemptEventUrl();
+  if (!state.config?.analyticsEnabled || !attemptUrl || state.attemptClosed) {
+    return;
+  }
+
+  try {
+    await fetchJson(
+      `${attemptUrl}/complete`,
+      "No se pudo registrar el cierre del intento.",
+      {
+        method: "POST",
+        body: {
+          correctAnswers: summary.correct,
+          totalQuestions: summary.total,
+          accuracy: summary.accuracy,
+          completionReason: "completed",
+          payload: {
+            testCode: state.selectedTest?.code || null,
+            strengths: summary.strengths,
+            errors: summary.errors,
+            recommendation: summary.recommendation,
+          },
+        },
+      },
+    );
+    state.attemptClosed = true;
+  } catch (_error) {
+    // El circuito de práctica no debe romperse si falla el registro analítico.
+  }
+}
+
+function sendBeaconJson(url, payload) {
+  if (!navigator.sendBeacon) {
+    return false;
+  }
+
+  const blob = new Blob([JSON.stringify(payload)], {
+    type: "application/json",
+  });
+  return navigator.sendBeacon(url, blob);
+}
+
+function abandonAttempt(reason, payload = {}, useBeacon = false) {
+  const attemptUrl = getAttemptEventUrl();
+  if (!state.config?.analyticsEnabled || !attemptUrl || state.attemptClosed) {
+    return;
+  }
+
+  const requestPayload = {
+    reason,
+    payload,
+  };
+
+  if (useBeacon && sendBeaconJson(`${attemptUrl}/abandon`, requestPayload)) {
+    state.attemptClosed = true;
+    return;
+  }
+
+  fetchJson(`${attemptUrl}/abandon`, "No se pudo registrar el abandono del intento.", {
+    method: "POST",
+    body: requestPayload,
+  })
+    .then(() => {
+      state.attemptClosed = true;
+    })
+    .catch(() => {
+      // El circuito de práctica no debe romperse si falla el registro analítico.
+    });
+}
+
+function trackCurrentView() {
+  if (!state.config?.analyticsEnabled || !state.attemptId) {
+    return;
+  }
+
+  if (state.phase === "reading") {
+    const eventType = state.answers.length > 0 ? "reading_revisited" : "reading_viewed";
+    const viewKey = `${state.phase}:${eventType}:${state.questionIndex}:${state.answers.length}`;
+    if (state.lastTrackedViewKey === viewKey) {
+      return;
+    }
+
+    state.lastTrackedViewKey = viewKey;
+    void postAttemptEvent(eventType, {
+      payload: {
+        questionIndex: state.questionIndex,
+        answeredCount: state.answers.length,
+      },
+    });
+    return;
+  }
+
+  if (state.phase === "question") {
+    const question = getCurrentQuestion();
+    if (!question) return;
+
+    const viewKey = `${state.phase}:${state.questionIndex}:${state.feedback ? "feedback" : "pending"}`;
+    if (state.lastTrackedViewKey === viewKey) {
+      return;
+    }
+
+    state.lastTrackedViewKey = viewKey;
+    void postAttemptEvent("question_viewed", {
+      questionId: question.id,
+      questionIndex: state.questionIndex,
+      payload: {
+        code: state.selectedTest?.code || null,
+        hasFeedback: Boolean(state.feedback),
+      },
+    });
+    return;
+  }
+
+  if (state.phase === "result") {
+    const viewKey = `${state.phase}:${state.selectedTest?.code || ""}:${state.answers.length}`;
+    if (state.lastTrackedViewKey === viewKey) {
+      return;
+    }
+
+    state.lastTrackedViewKey = viewKey;
+    void postAttemptEvent("result_viewed", {
+      payload: {
+        code: state.selectedTest?.code || null,
+      },
+    });
   }
 }
 
@@ -142,6 +317,8 @@ function render() {
   if (state.phase === "result") {
     renderResult();
   }
+
+  trackCurrentView();
 }
 
 function renderIntro() {
@@ -266,11 +443,29 @@ async function startTest(code) {
     }
 
     state.selectedTest = test;
+    resetAttemptTracking();
     state.phase = "reading";
     state.questionIndex = 0;
     state.selectedOption = null;
     state.feedback = null;
     state.answers = [];
+
+    if (state.config?.analyticsEnabled) {
+      try {
+        const attempt = await fetchJson(
+          "/api/attempts",
+          "No se pudo registrar el inicio del intento.",
+          {
+            method: "POST",
+            body: { testCode: test.code },
+          },
+        );
+        state.attemptId = attempt.attemptId || null;
+      } catch (_error) {
+        state.attemptId = null;
+      }
+    }
+
     render();
   } catch (error) {
     state.phase = "error";
@@ -489,11 +684,22 @@ function submitCurrentAnswer() {
   });
 
   state.feedback = { isCorrect };
+  state.lastTrackedViewKey = "";
   announce(
     isCorrect
       ? `Respuesta correcta en la pregunta ${state.questionIndex + 1}.`
       : `Respuesta incorrecta en la pregunta ${state.questionIndex + 1}.`,
   );
+  void postAttemptEvent("answer_submitted", {
+    questionId: question.id,
+    questionIndex: state.questionIndex,
+    selectedOption: state.selectedOption,
+    correctOption: question.correctOptionIndex,
+    isCorrect,
+    payload: {
+      topics: question.topics,
+    },
+  });
   render();
 }
 
@@ -501,6 +707,7 @@ function advanceQuestion() {
   const isLast = state.questionIndex >= state.selectedTest.questions.length - 1;
   if (isLast) {
     state.phase = "result";
+    state.lastTrackedViewKey = "";
     render();
     return;
   }
@@ -508,6 +715,7 @@ function advanceQuestion() {
   state.questionIndex += 1;
   state.selectedOption = null;
   state.feedback = null;
+  state.lastTrackedViewKey = "";
   render();
 }
 
@@ -579,6 +787,7 @@ function buildSummary() {
 
 function renderResult() {
   const summary = buildSummary();
+  void completeAttempt(summary);
 
   app.innerHTML = `
     <section class="panel final-grid">
@@ -641,11 +850,20 @@ function resetToSelection(force = false) {
     return;
   }
 
+  if (hasActiveAttempt()) {
+    abandonAttempt("returned_to_catalog", {
+      code: state.selectedTest?.code || null,
+      questionIndex: state.questionIndex,
+      answeredCount: state.answers.length,
+    });
+  }
+
   state.selectedTest = null;
   state.questionIndex = 0;
   state.selectedOption = null;
   state.feedback = null;
   state.answers = [];
+  resetAttemptTracking();
   state.phase = "selection";
   render();
 }
@@ -675,4 +893,21 @@ async function initializeApp() {
 backButton.addEventListener("click", () => {
   resetToSelection();
 });
+
+window.addEventListener("beforeunload", () => {
+  if (!hasActiveAttempt()) {
+    return;
+  }
+
+  abandonAttempt(
+    "page_unloaded",
+    {
+      code: state.selectedTest?.code || null,
+      questionIndex: state.questionIndex,
+      answeredCount: state.answers.length,
+    },
+    true,
+  );
+});
+
 initializeApp();

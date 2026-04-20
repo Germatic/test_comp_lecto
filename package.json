@@ -1,7 +1,7 @@
 {
   "name": "test_comp_lecto",
   "version": "1.0.0",
-  "description": "Repositorio listo para usar con un sistema de tests de comprensión lectora en español.",
+  "description": "Aplicacion web para practicar tests de comprension lectora en espanol.",
   "main": "server/index.js",
   "scripts": {
     "start": "node server/index.js",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Germatic/test_comp_lecto#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "pg": "^8.20.0"
   }
 }
